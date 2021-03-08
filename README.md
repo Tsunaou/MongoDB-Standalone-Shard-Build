@@ -65,7 +65,8 @@ shard2:rs-2:28012
 
 ### 2.2 数据目录和文件创建生成
 
-这里我用了一个python脚本来执行，详见[虚假的链接]()。目录如下
+这里我用了一个python脚本来执行，详见[build_mongo.py](https://github.com/Tsunaou/MongoDB-Standalone-Shard-Build/blob/main/build_mongo.py)。
+修改`build_mongo.py`中的工作目录地址`WORKSPACE`，有生成目录如下
 
 ```bash
 $ python3 ./build_mongo.py
@@ -189,7 +190,7 @@ $ python3 ./build_mongo.py
 
 #### 3.1.1 启动配置服务器（config），并进行初始化
 
-首先将yaml配置文件中的security部分注释掉，然后启动（这里介绍一下命令，后续用脚本）：
+首先将yaml配置文件中的security部分注释掉，然后启动（这里介绍一下命令，后续用脚本[start_service.py](https://github.com/Tsunaou/MongoDB-Standalone-Shard-Build/blob/main/start_service.py)）：
 
 ```bash
 mongod -f /home/young/mongodb/opt/configsvr/conf29010/config29010.yaml
